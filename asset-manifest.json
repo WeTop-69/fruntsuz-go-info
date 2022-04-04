@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/fruntsuz-go-info/static/css/main.6367068c.css",
+    "main.js": "/fruntsuz-go-info/static/js/main.b9f52da9.js",
+    "static/js/787.82d1d9e6.chunk.js": "/fruntsuz-go-info/static/js/787.82d1d9e6.chunk.js",
+    "static/media/nickelodeon2001headline.ttf": "/fruntsuz-go-info/static/media/nickelodeon2001headline.8e78c9b77628befa8612.ttf",
+    "static/media/pngwing 64.png": "/fruntsuz-go-info/static/media/pngwing 64.5c7ead72b4821a81214e.png",
+    "static/media/pngwing 59.png": "/fruntsuz-go-info/static/media/pngwing 59.428949407f8289629fd8.png",
+    "static/media/Group 1024.svg": "/fruntsuz-go-info/static/media/Group 1024.2b9badfa223c56c7e985b7c2ae0c04b5.svg",
+    "static/media/Vector.svg": "/fruntsuz-go-info/static/media/Vector.4fd4bb7b36728f461d931780c7b0efed.svg",
+    "static/media/Group 1025.svg": "/fruntsuz-go-info/static/media/Group 1025.2d249a9e1bf162ab12c21d6a670e1e7e.svg",
+    "static/media/Group 1023.svg": "/fruntsuz-go-info/static/media/Group 1023.b65a97f1983302f78e0660746544369b.svg",
+    "static/media/Vector (1).svg": "/fruntsuz-go-info/static/media/Vector (1).8a298506468804e58823fc0058cad6aa.svg",
+    "static/media/Vector (2).svg": "/fruntsuz-go-info/static/media/Vector (2).f5c38a1bf34a633eacaf93f356704695.svg",
+    "index.html": "/fruntsuz-go-info/index.html",
+    "static/media/downloading_black_24dp.svg": "/fruntsuz-go-info/static/media/downloading_black_24dp.b239872b75fa3eea2fa73f0cf11ebc39.svg",
+    "main.6367068c.css.map": "/fruntsuz-go-info/static/css/main.6367068c.css.map",
+    "main.b9f52da9.js.map": "/fruntsuz-go-info/static/js/main.b9f52da9.js.map",
+    "787.82d1d9e6.chunk.js.map": "/fruntsuz-go-info/static/js/787.82d1d9e6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6367068c.css",
+    "static/js/main.b9f52da9.js"
+  ]
+}
