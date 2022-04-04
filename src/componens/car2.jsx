@@ -56,11 +56,12 @@ function Car2() {
       document.getElementById('infoCar2').innerHTML = her2;
     }
   })
+  let chel = false
   function btnInfoCarFree() {
   const dbRefTwo = ref(getDatabase());
   get(child(dbRefTwo, `cars/E461YK/free`)).then((snapshot) => {
     const btnInfoOne = snapshot.val();
-    if (btnInfoOne == true){
+    if (chel == true){
       const db = getDatabase();
       const her2 = "НЕДОСТУПНА"
       var cdo = document.querySelector('#carDesOne2');
@@ -72,12 +73,7 @@ function Car2() {
       var nam = document.querySelector('#namber2');
       nam.className = 'item-block namber text-color';
       document.getElementById('infoCar2').innerHTML = her2;
-      set(ref(db, 'cars/E461YK'), {
-        carNumber: "E461YK",
-        driverName: "Дима",
-        free : false,
-        model: "Lada Granta красная",
-      });
+      chel = false
     } else {
       const db = getDatabase();
       const her2 = "ДОСТУПНА"
@@ -90,31 +86,7 @@ function Car2() {
       var nam = document.querySelector('#namber2');
       nam.className = 'item-block namber';
       document.getElementById('infoCar2').innerHTML = her2;
-      set(ref(db, 'cars/E461YK'), {
-        carNumber: "E461YK",
-        driverName: "Дима",
-        free : true,
-        model: "Lada Granta красная",
-        }); 
-
-        const dbRef1 = ref(getDatabase());
-        let btnInfo1 = []
-        let btnInfo12 = []
-        let btnInfo33 = {}
-        get(child(dbRef1, `trips/current`)).then((snapshot) => {
-          btnInfo1 = Object.values(snapshot.val());
-        })
-        get(child(dbRef1, `trips/completed`)).then((snapshot) => {
-          btnInfo12 = Object.values(snapshot.val());
-        })
-        setTimeout(() => {
-          let current = btnInfo1
-          let completed = btnInfo12
-          let huy = current.filter((her44) => her44.carNumber == 'E461YK')[0]
-          completed.push(huy)
-          current.splice(current.indexOf(huy), 1)
-          set(ref(db, 'trips'), { completed, current}); 
-      }, 1000);
+      chel = true
       }
     })
   }

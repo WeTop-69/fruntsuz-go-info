@@ -54,13 +54,15 @@ function Car3() {
       var nam = document.querySelector('#namber3');
       nam.className = 'item-block namber';
       document.getElementById('infoCar3').innerHTML = her2;
+      chel = false
     }
   })
+  let chel = false
   function btnInfoCarFor() {
   const dbRefTwo = ref(getDatabase());
   get(child(dbRefTwo, `cars/P095YK/free`)).then((snapshot) => {
     const btnInfoOne = snapshot.val();
-    if (btnInfoOne == true){
+    if (chel == true){
       const db = getDatabase();
       const her2 = "НЕДОСТУПНА"
       var cdo = document.querySelector('#carDesOne3');
@@ -72,12 +74,7 @@ function Car3() {
       var nam = document.querySelector('#namber3');
       nam.className = 'item-block namber text-color';
       document.getElementById('infoCar3').innerHTML = her2;
-      set(ref(db, 'cars/P095YK'), {
-        carNumber: "P095YK",
-        driverName: "Денис",
-        free : false,
-        model: "Lada Granta серая",
-      });
+      chel = false
     } else {
       const db = getDatabase();
       const her2 = "ДОСТУПНА"
@@ -90,31 +87,7 @@ function Car3() {
       var nam = document.querySelector('#namber3');
       nam.className = 'item-block namber';
       document.getElementById('infoCar3').innerHTML = her2;
-      set(ref(db, 'cars/P095YK'), {
-        carNumber: "P095YK",
-        driverName: "Денис",
-        free : true,
-        model: "Lada Granta серая",
-        }); 
-
-        const dbRef1 = ref(getDatabase());
-        let btnInfo1 = []
-        let btnInfo12 = []
-        let btnInfo33 = {}
-        get(child(dbRef1, `trips/current`)).then((snapshot) => {
-          btnInfo1 = Object.values(snapshot.val());
-        })
-        get(child(dbRef1, `trips/completed`)).then((snapshot) => {
-          btnInfo12 = Object.values(snapshot.val());
-        })
-        setTimeout(() => {
-          let current = btnInfo1
-          let completed = btnInfo12
-          let huy = current.filter((her44) => her44.carNumber == 'P095YK')[0]
-          completed.push(huy)
-          current.splice(current.indexOf(huy), 1)
-          set(ref(db, 'trips'), { completed, current}); 
-      }, 1000);
+      chel = true
       }
     })
   }

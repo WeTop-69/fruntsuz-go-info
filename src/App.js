@@ -11,8 +11,8 @@ function App() {
        <BrowserRouter>
         <Routes>
           <Route path="frantsuz-go-login/3" element={<Login/>} />
-          <Route path="site-frantsuz-go/" element={<Main/>} />
-          <Route path="site-frantsuz-go-info/" element={<InfoCar/>} />
+          <Route path="fruntsuz-go-in" element={<Main/>} />
+          <Route path="fruntsuz-go-info/" element={<InfoCar/>} />
         </Routes>
       </BrowserRouter>
     </div>

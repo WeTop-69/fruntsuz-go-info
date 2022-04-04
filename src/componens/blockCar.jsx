@@ -61,11 +61,12 @@ function BlockCar() {
       document.getElementById('infoCar').innerHTML = her2;
     }
   })
+  let chel = false
   function btnInfoCar() {
   const dbRefTwo = ref(getDatabase());
   get(child(dbRefTwo, `cars/E347YK/free`)).then((snapshot) => {
     const btnInfoOne = snapshot.val();
-    if (btnInfoOne == true){
+    if (chel == true){
       const db = getDatabase();
       const her2 = "НЕДОСТУПНА"
       var cdo = document.querySelector('#carDesOne');
@@ -77,12 +78,7 @@ function BlockCar() {
       var nam = document.querySelector('#namber');
       nam.className = 'item-block namber text-color';
       document.getElementById('infoCar').innerHTML = her2;
-      set(ref(db, 'cars/E347YK'), {
-        carNumber: "E347YK",
-        driverName: infocar,
-        free : false,
-        model: "Lada Granta чёрная",
-      });
+      chel = false
     } else {
       const db = getDatabase();
       const her2 = "ДОСТУПНА"
@@ -94,32 +90,8 @@ function BlockCar() {
       bcc.className = 'BlockCar';
       var nam = document.querySelector('#namber');
       nam.className = 'item-block namber';
-      document.getElementById('infoCar').innerHTML = her2;
-      set(ref(db, 'cars/E347YK'), {
-        carNumber: "E347YK",
-        driverName: infocar,
-        free : true,
-        model: "Lada Granta чёрная",
-        }); 
-
-        const dbRef1 = ref(getDatabase());
-        let btnInfo1 = []
-        let btnInfo12 = []
-        let btnInfo33 = {}
-        get(child(dbRef1, `trips/current`)).then((snapshot) => {
-          btnInfo1 = Object.values(snapshot.val());
-        })
-        get(child(dbRef1, `trips/completed`)).then((snapshot) => {
-          btnInfo12 = Object.values(snapshot.val());
-        })
-        setTimeout(() => {
-          let current = btnInfo1
-          let completed = btnInfo12
-          let huy = current.filter((her44) => her44.carNumber == 'E347YK')[0]
-          completed.push(huy)
-          current.splice(current.indexOf(huy), 1)
-          set(ref(db, 'trips'), { completed, current}); 
-      }, 1000);
+      document.getElementById('infoCar').innerHTML = her2; 
+      chel = true
       }
     })
   };

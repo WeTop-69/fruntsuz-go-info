@@ -88,7 +88,7 @@ function InfoCar(props, data) {
         <Loader />
       </div>
         <div className='blok-car'>
-        <a href='https://wetop-69.github.io/site-frantsuz-go/' className="name-site">
+        <a href='https://wetop-69.github.io/fruntsuz-go/' className="name-site">
             <img className='logo' src={logo}/>
           </a>
           <div className="btn-blok">
